@@ -48,8 +48,9 @@ int A4(int n) {
 }
 
 int A5(int a[], int n) {
-    if(n == 1 && a[n - 1] % 2 != 0)
-        return a[n - 1];
-    else    
-        return A5(a, n - 1); 
+    if(n == 0)
+        return 0;
+    if(a[n - 1] % 2 != 0)
+        return a[n - 1] + A5(a, n - 1);
+    return A5(a, n - 1);
 }
