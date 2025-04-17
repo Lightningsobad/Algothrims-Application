@@ -7,6 +7,8 @@ int timUCLN(int a, int b);
 long timFibo(int a);
 long C(int k, int n);
 long tongNsoTuNhien(int n);
+
+
 int main() {
     // cout << "9! = " << tinhGiaiThua(9) << endl;
     // cout << timUCLN(150, 15) << endl;
