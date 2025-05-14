@@ -93,15 +93,13 @@ void A3(ChuyenBay x[], ChuyenBay* x_result, bool* flag, int n, int k){
 	}
 }
 
-// void A3(ChuyenBay x[], ChuyenBay* x_result, int n, int k){
-// 	for(int i = 0; i < n; i++){
-// 		strcpy((x_result[k]).soHieu, x[i].soHieu);
-// 		x_result[k].giave = x[i].giave;
-// 		x_result[k].soghe = x[i].soghe;
-// 		if(k == 4)
-// 			showResultA3(x_result);
-// 		else
-// 			A3(x, x_result, flag, n, k + 1);
+// void A3(ChuyenBay x[], ChuyenBay* x_result, bool* flag int n, int k){
+// 	if(k == 0){
+// 		for(int i = 0; i < n; i++){
+// 			if(flag == false){
+				
+// 			}
+// 		}
 // 	}
 // }
 
