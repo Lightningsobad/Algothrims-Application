@@ -11,6 +11,7 @@ struct DienThoai
     int gia_ban;
 };
 
+//hàm định dạng hiển thị kết quả
 void hien_thi_ket_qua(DienThoai* r, int n){
     for (int i = 0; i < n; i++)
     {
@@ -19,7 +20,8 @@ void hien_thi_ket_qua(DienThoai* r, int n){
     
 }
 
-void Q1(int k[], int v[], int n, int s, int** F, DienThoai d[], int &count, DienThoai* r){
+void Q1(int k[], int v[], int n, int s, int** F, DienThoai d[], int &count, DienThoai* r){ // trả về kết quả thông qua 2 biến count và r
+    //thuật toán quy hoạch động
     for (int j = 0; j <= s; j++)
     {
         F[0][j] = 0;
@@ -37,20 +39,22 @@ void Q1(int k[], int v[], int n, int s, int** F, DienThoai d[], int &count, Dien
         }
         
     }
-    count = 0;
-    cout << "Result: " << F[n][s] << endl;
+    //
+    count = 0; // biến đếm số lượng
+    cout << "Result: " << F[n][s] << endl; // kết quả giá trị lớn nhất thu được
     int i = n;
     int j = s;
     while (i != 0)
     {
         if(F[i][j] != F[i - 1][j]){
             count++;
-            r[count - 1] = d[i - 1];
+            r[count - 1] = d[i - 1];    //thêm phần tử phù hợp chọn được từ bảng phương án vào danh sách kết quả
             j = j - k[i];
         }
         i--;
     }
     cout << endl;
+    //in bảng phương án
     for (int i = 0; i < n + 1; i++)
     {
         for (int j = 0; j < s + 1; j++)
@@ -75,8 +79,8 @@ int main() {
         {"Nokia", 9, 11000000},
         {"Bphone",8, 10500000},
     };
-    int* k = new int[n + 1];
-    int* v = new int[n + 1];
+    int* k = new int[n + 1]; // tạo mảng kích thước
+    int* v = new int[n + 1]; //tạo mảng giá trị
     k[0] = 0;
     for (int i = 1; i <= n; i++)
     {
@@ -90,7 +94,7 @@ int main() {
     int s = 20;
     int count;
     DienThoai* r = new DienThoai[n];
-    int** F = new int*[n + 1];
+    int** F = new int*[n + 1];  //tạo mảng 2 chiều lưu trữ bảng phương án
     for (int i = 0; i < n + 1; i++)
     {
         F[i] = new int[s + 1];
