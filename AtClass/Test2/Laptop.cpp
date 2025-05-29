@@ -56,7 +56,7 @@ int F1(char* t, char * p) {
 void F3(Laptop d[], int n, int &r){
     int result[n];
     r = 0;
-    char p[] = "RAM 16GB";
+    char p[] = "RAM 16GB"; 
     for (int i = 0; i < n; i++)
     {
         result[i] = F1(d[i].cau_hinh, p);
@@ -107,7 +107,6 @@ bool F2(char* t, char* p){
 void F4(Laptop d[], int n, int &s, Laptop* t){
     s = 0;
     char p[] = "SSD";
-    Laptop result[n];
     for (int i = 0; i < n; i++)
     {
         if(F2(d[i].cau_hinh, p)){

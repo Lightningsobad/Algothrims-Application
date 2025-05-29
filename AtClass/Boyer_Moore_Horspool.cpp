@@ -14,8 +14,10 @@ int char_in_string(char ch, char *s){
 }
 
 bool BMH(char* t, char* p){
+    int n = strlen(t);
     int v = strlen(p);
-    int i = v - 1;
+    int i = n - 1;
+    int k = v - 1;
     while (i < strlen(t))
     {
         int k = v - 1;

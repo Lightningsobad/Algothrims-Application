@@ -51,6 +51,5 @@ int main() {
     char p[] = "Viet";
     int count = z_app(t, p);
     cout << count << endl;
-
-
+    
 }

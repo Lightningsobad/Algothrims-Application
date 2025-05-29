@@ -114,7 +114,6 @@ void A2(int* a, bool* flag, int n, int k) {
                 flag[i] = false;
             }
         }
-
     }
  }
 
