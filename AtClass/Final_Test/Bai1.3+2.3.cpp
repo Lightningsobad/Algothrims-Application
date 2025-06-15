@@ -5,7 +5,7 @@ using namespace std;
 
 struct GoiHang{
     int khoi_luong;  //khối lượng
-    int gia_tri;  //giá trị
+    int gia_tri;     //giá trị
 };
 
 float A(float a[], int l, int r){

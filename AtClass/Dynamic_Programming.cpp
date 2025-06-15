@@ -12,14 +12,13 @@ void algorithm(int w[], int v[], int n, int m, int **F){
     {
         for (int j = 0; j <= m; j++)
         {
-            F[i][j] = F[i - 1][j]; // không lấy gói thứ i
+            F[i][j] = F[i - 1][j];      
             if(w[i] <= j){
                 int temp = v[i] + F[i - 1][j - w[i]];
-                if(F[i][j] < temp)      //lấy gói thứ i
+                if(F[i][j] < temp)      
                     F[i][j] = temp;
             }
-        }
-        
+        }     
     }
 }
 

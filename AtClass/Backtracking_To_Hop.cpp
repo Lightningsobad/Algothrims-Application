@@ -34,7 +34,6 @@ void Try(int s[], int* x, int n, int m, int k, int &count, bool* flag){ //Tổ h
 }
 
 void Try_v2(int s[], int* x, int n, int m, int k, int &count, int index){ //tổ hợp cho tập bất kì
-    count = 0;
     if(k == m){
         Show_Result(x, m);
         count++;
