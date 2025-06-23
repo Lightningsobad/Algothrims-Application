@@ -1,7 +1,7 @@
 # KHO TÀI LIỆU MÔN ỨNG DỤNG THUẬT TOÁN - HAUI
 
 ## Giới thiệu
-Đây là kho chứa các kiến thức mình tổng hợp được từ môn học này, mình tặng các bạn nha!!!!
+Đây là kho chứa các kiến thức mình tổng hợp được từ môn học này, mình tặng các bạn nha. Chúc các bạn học thật tốt, mang về nhiều A nha!!!
 
 ## Mô tả các file
 | Dạng File       | Mô Tả                                                                              |
