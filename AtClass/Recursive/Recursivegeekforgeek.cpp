@@ -21,16 +21,16 @@ string removeDuplicateCharacter(string str);
 
 
 int main() {
-    // vector<int> vec = printFibonacciNumbers(10);
-    // for (int i = 0; i < vec.size(); i++)
-    // {
-    //     cout << vec[i] <<  " ";
-    // }
-    // int a[] = {10, 4, 3, 5, -2, 6};
-    // int n = sizeof(a) / sizeof(a[0]);
-    // cout << findMinOfArray(a, n) << endl;
-    // cout << findMaxOfArray(a, n);
-    //cout << calculateSumOfDigitOfNumber(555555);
+    vector<int> vec = printFibonacciNumbers(10);
+    for (int i = 0; i < vec.size(); i++)
+    {
+        cout << vec[i] <<  " ";
+    }
+    int a[] = {10, 4, 3, 5, -2, 6};
+    int n = sizeof(a) / sizeof(a[0]);
+    cout << findMinOfArray(a, n) << endl;
+    cout << findMaxOfArray(a, n);
+    cout << calculateSumOfDigitOfNumber(555555);
 
     return 0;
 }
