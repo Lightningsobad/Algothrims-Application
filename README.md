@@ -10,3 +10,4 @@
 | '.pdf'          | Các file slide bài giảng trên lớp và các bài thực hành (nguồn từ thầy, cô trên lớp)          |
 | '.png, .jpg'    | Các file ảnh là các đề kiểm tra thường xuyên và kết thúc học phần mình sưu tầm được từ bạn bè|
 | '.xlsx'         | Các file excel mô tả, chạy chậm thuật toán dễ hiểu hơn nha                                   |
+| '.txt'          | Các ghi chú về thuật toán mình để ở đây                                                      |
