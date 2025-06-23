@@ -1,0 +1,23 @@
+THUẬT TOÁN QUY HOẠCH ĐỘNG -  BÀI TOÁN CÁI TÚI
+Phương pháp
+Nếu gọi F(i, j) là giá trị lớn nhất có thể lấy được bằng cách lấy trong số các gói {1, 2, ..., i}
+với giới hạn trọng lượng là j (j = 0, 1, 2, ..., m) 
+Giá trị lớn nhất khi lấy trong số các gói {1, 2, ..., n}  với giới hạn trọng lượng m sẽ là f(n, m)
+Công thức truy hồi tính f(i, j)
+- Trước đó đã tính được f(i - 1, j), f(i - 1, j - w[i])
+- Với giới hạn trọng lượng j, việc lấy tối ưu trong số các gói {1, 2, ..., i - 1, i} để có giá trị lớn nhất có hai khả năng:
+khả năng 1: Nếu không lấy gói thứ i thì f(i, j) là giá trị lớn nhất có thể có bằng cách lấy trong số các gói {1, 2, ..., i - 1} Nghĩa là f(i, j) = f(i - 1, j)
+Khả năng 2: Nếu lấy gói thứ i (w[i] <= j) thì f(i, j) = v[i] + f(i - 1, j - w[i])
+Cơ sở quy hoạch động
+f(0, j) = 0 là giá trị lớn nhất có thể khi lấy trong số 0 gói hàng
+Bảng phương án: 
+- Bảng F gồm n + 1 dòng và m + 1 cột
+Dòng đầu (i = 0) với F[0][j] = 0 (j = 0 -> m)
+Dùng dòng i, tính dòng i + 1, với i = 0 -> n - 1
+TRUY VẾT
+F[n][m] là giá trị lớn nhất lấy được khi lấy trong n gói hàng với giới hạn trọng lượng là m.
+Nếu F[n][m] = F[n - 1][m] -> không lấy gói thứ n, truy tiếp F[n-1][m]
+Nếu F[n][m] != F[n - 1][m] có lấy gói thứ n, truy tiếp F[n - 1][w - w[n]]. 
+- Truy vết tiếp lên đến hàng 0
+f(i, j) = f(i - 1, j) không lấy gói i
+	= v[i] + f(i - 1, j - w[i]): có lấy gói i
