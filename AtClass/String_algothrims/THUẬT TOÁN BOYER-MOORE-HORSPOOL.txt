@@ -1,0 +1,11 @@
+THUẬT TOÁN BOYER-MOORE-HORSPOOL
+Cách so sánh xâu P với các sâu con của xâu T
+Các xâu con gồm các kí tự liên tiếp trong T, bắt đầu từ T[j] (0 <= j <= len(T) - len(P)) và có chiều dài bằng chiều dài của xâu P
+Cách so sánh xâu P với các xâu con của xâu T
+- SO SÁNH NGƯỢC TỪ KÍ TỰ CUỐI TRỞ VỀ ĐẦU
+- Giả sử vị trí bắt đầu so sánh trong T là T[i], và vị trí cuối cùng của P là P[k] (k = len(P) - 1)
+- Ta sẽ so sánh T[i] với P[k] và dịch chuyển về đầu
+- Nếu việc khớp từng ký tự vượt qua được P[0] thì P có mặt trong T
+- Ngược lại (có T[i] != P[k]): 
+ Nếu T[i] không có trong P thì i = i + v(với v = len(P))
+ Ngược lại (T[i] có trong P): gọi x là vị trí xuất hiện đầu tiên của T[i] trong P (nghĩa là T[i] = P[x]), thì i = i + v - x - 1

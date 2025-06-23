@@ -1,0 +1,28 @@
+THUẬT TOÁN Z
+Kiểm tra xem P xuất hiện bao nhiêu lần trong xâu T
+Giả sử S là một xâu kí tự  chỉ gồm chữ cái và chữ số
+Định nghĩa: Xâu tiền tố của S là một xâu con của S tính từ vị trí S[i] bằng với phần đầu của xâu S (1 <= i <= len(S) - 1)
+Phương pháp: Thuật toán Z là xây dựng một mảng Z[...] với ý nghĩa Z[i] là độ dài của xâu tiền tố bắt đầu từ vị trí S[i]
+Ứng dụng: Tìm trong xâu T xem có bao nhiêu xâu con P trong đó
+Thuật toán: Xâu tiền tố của S là một xâu con của S tính từ vị trí đầu tiên 
+_ Tạo một xâu mới S = P + "$" + T (trong đó kí tự "$" không có trong các xâu T và P)
+_ Sau đó áp dụng thuật toán Z để tìm ra các tiền tố của S.
+_ Độ dài tiền tố nào bằng độ dài của P, thì đó chính là xâu con P
+
+Phương pháp cài đặt thuật toán Z: 
+_ Duyệt chuỗi S: i từ 1 đến n - 1 (mảng bắt đầu từ 0)
+_ Mỗi vị trí i ta quản lí một đoạn [left, right] với right lớn nhất có thể sao cho xâu con từ left tới right là tiền tố của xâu S
+_ Ban đầu left = right = 0;
+_ Giả sử ở i ta đã có đoạn [left, right] của vị trí i - 1 và giả sử đã tính được tất cả giá trị Z trước đó
+_ Chia 2 trường hợp để cập nhật left, right, và Z[i] như sau: 
+TH1: nếu i > right, trong trường hợp này không có tiền tố nào bắt đầu trước i và kết thúc sau i
+Gán left = i;
+Cho right chạy từ i trở lên để tìm đoạn [left, right] mới;
+Sau đó tính Z[i] = right - left; right = right - 1;
+TH2: ngược lại, i <= right
+Đặt k = i - left, ta thấy xâu S[k...] và xâu S[i..] giống nhau ở ít nhất right - i + 1 phần tử đầu, vì vậy có thể tận dụng Z[k] để tính Z[i]
+ −Ta có: Z[i]≥min(Z[k],right−i+1).
+ −Nếu Z[k]<right−i+1thìZ[i]=Z[k]
+ −Nếu Z[k]≥right−i+1thì:
+ +gán lại left=i và cho righttiếptụctăngđểtìmđoạn[left, right]mới.
+ +Sau đó cũng cóZ [i]=right−leftnhưtrên
